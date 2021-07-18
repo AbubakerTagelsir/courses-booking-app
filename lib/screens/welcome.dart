@@ -1,4 +1,5 @@
 import 'package:courses_booking_app/components/logo.dart';
+import 'package:courses_booking_app/screens/login.dart';
 import 'package:flutter/material.dart';
 
 import 'register.dart';
@@ -16,9 +17,17 @@ class Welcome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               OurLogo(),
-              ElevatedButton(
-                onPressed: () {},
-                child: Text("Login"),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => Login(),
+                        ));
+                  },
+                  child: Text("Login"),
+                ),
               ),
               InkWell(
                 child: Text("Welcome to the courses booking app"),
