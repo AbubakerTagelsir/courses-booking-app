@@ -8,7 +8,9 @@ class Homepage extends StatelessWidget {
     return Scaffold(
         body: Container(
       padding: EdgeInsets.all(10),
-      color: Colors.red,
+      child: Center(
+        child: Text("Homepage"),
+      ),
     ));
   }
 }
